@@ -1,6 +1,6 @@
 {
   "osx" : {
-    "title": "Your app name",
+    "title": "my-awesome-app",
     "background": "assets/osx/installer.png",
     "icon": "assets/osx/mount.icns",
     "icon-size": 80,
@@ -10,7 +10,7 @@
     ]
   },
   "win" : {
-    "title" : "Your app name",
+    "title" : "my-awesome-app",
     "icon" : "assets/win/icon.ico"
   }
 }
