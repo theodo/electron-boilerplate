@@ -7,7 +7,7 @@ In addition to [Electron's minimal app](http://electron.atom.io/docs/v0.34.0/tut
 
 ## Pre-requisites
 
-If you are on OS X/Linux and want to build for Windows, you need Wine installed. Wine is required in order to set the correct icon for the exe.
+If you are on OS X/Linux and want to build for Windows, you need Wine installed. Wine is required in order to set the correct icon for the `.exe`.
 
 You will also need the nullsoft scriptable install system for all platforms.
 

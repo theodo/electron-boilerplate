@@ -11,7 +11,6 @@ More details about our adventure are present on the blog article we published, a
 3. [Unleash the power of AngularJS](doc/code-your-app-with-angular.md)
 4. [File association in Windows](doc/file-association-in-windows.md)
 
-
 ## How does this boilerplate works ?
 
 We created this boilerplate using :
