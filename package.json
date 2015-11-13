@@ -1,0 +1,39 @@
+{
+  "name": "electron-boilerplate",
+  "version": "1.0.0",
+  "description": "Electron boilerplate to deploy to any platform",
+  "scripts" : {
+    "start": "electron ./app",
+    "clean": "rm -rf ./dist",
+    "pack": "npm run pack:linux32 && npm run pack:linux64 && npm run pack:osx && npm run pack:win32 && npm run pack:win64",
+    "pack:linux32": "electron-packager ./app $npm_package_name --out=dist/ --platform=linux --arch=ia32 --version=0.34.1 --overwrite",
+    "pack:linux64": "electron-packager ./app $npm_package_name --out=dist/ --platform=linux --arch=x64 --version=0.34.1 --overwrite",
+    "pack:osx": "electron-packager ./app $npm_package_name --out=dist/ --platform=darwin --arch=x64 --version=0.34.1 --icon=assets/osx/icon.icns --overwrite",
+    "pack:win32": "electron-packager ./app $npm_package_name --out=dist/ --platform=win32 --arch=ia32 --version=0.34.1 --icon=assets/win/icon.ico --overwrite",
+    "pack:win64": "electron-packager ./app $npm_package_name --out=dist/ --platform=win32 --arch=x64 --version=0.34.1 --icon=assets/win/icon.ico --overwrite",
+    "build": "npm run clean && build:osx && build:win32 && build:win64",
+    "build:osx": "npm run pack:osx && electron-builder dist/$npm_package_name-darwin-x64 --platform=osx --out=dist/$npm_package_name-darwin-x64 --config=build-config.json",
+    "build:win32": "npm run pack:win32 && electron-builder dist/$npm_package_name-win32-ia32 --platform=win --out=dist/$npm_package_name-win32-ia32  --config=build-config.json",
+    "build:win64": "npm run pack:win64 && electron-builder dist/$npm_package_name-win32-x64 --platform=win --out=dist/$npm_package_name-win32-x64 --config=build-config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TristanPouliquen/electron-boilerplate.git"
+  },
+  "keywords": [
+    "electron",
+    "boilerplate",
+    "cross-platform",
+    "deploy"
+  ],
+  "author": "Theodo (http://www.theodo.fr)",
+  "bugs": {
+    "url": "https://github.com/TristanPouliquen/electron-boilerplate/issues"
+  },
+  "homepage": "https://github.com/TristanPouliquen/electron-boilerplate#readme",
+  "dependencies": {
+    "electron-builder": "^2.1.1",
+    "electron-packager": "^5.1.1",
+    "electron-prebuilt": "^0.34.3"
+  }
+}
