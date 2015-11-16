@@ -1,8 +1,8 @@
-# Write your First Electron App (source : [Electron Quickstart Guide](http://electron.atom.io/docs/v0.34.0/tutorial/quick-start/))
+# Write your First Electron App (source: [Electron Quickstart Guide](http://electron.atom.io/docs/v0.34.0/tutorial/quick-start/))
 
 Electron bundles a NodeJs backend with a Chromium instance to allow to serve web contents through a desktop app. 
 
-The usual minimal working Electron app is built like this : 
+The usual minimal working Electron app is built like this:
 
 ```text
 app/
@@ -11,7 +11,7 @@ app/
 └── index.html
 ```
 
-The format of `package.json` is exactly the same as that of Node's modules. An example of a minimal `package.json` could be :
+The format of `package.json` is exactly the same as that of Node's modules. An example of a minimal `package.json` could be:
 
 ```json
 {
@@ -21,7 +21,7 @@ The format of `package.json` is exactly the same as that of Node's modules. An e
 }
 ```
 
-The script specified in the `main` field is the startup script of your app, which will run Electron's main process. This proces is the core of your app. It creates windows, handles system events, communicates with the user's computer. A typical example is :
+The script specified in the `main` field is the startup script of your app, which will run Electron's main process. This proces is the core of your app. It creates windows, handles system events, communicates with the user's computer. A typical example is:
 
 ```javascript
 var app = require('app');  // Module to control application life.
@@ -65,7 +65,7 @@ app.on('ready', function() {
 });
 ```
 
-Finally, `index.html` is the entry point of Electron in your app. A basic example is :
+Finally, `index.html` is the entry point of Electron in your app. A basic example is:
 
 ```html
 <!DOCTYPE html>
