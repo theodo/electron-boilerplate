@@ -11,6 +11,7 @@
   },
   "win" : {
     "title" : "my-awesome-app",
-    "icon" : "assets/win/icon.ico"
+    "icon" : "assets/win/icon.ico",
+    "nsiTemplate" : "dist/nsi-template/win/installer.nsi.tpl"
   }
 }
