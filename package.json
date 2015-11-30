@@ -2,7 +2,7 @@
   "name": "my-awesome-app",
   "version": "1.0.0",
   "description": "Electron boilerplate to deploy to any platform",
-  "scripts" : {
+  "scripts": {
     "start": "electron ./app",
     "clean": "rm -rf ./dist",
     "pack": "npm run pack:linux32 && npm run pack:linux64 && npm run pack:osx && npm run pack:win32 && npm run pack:win64",
@@ -12,9 +12,9 @@
     "pack:win32": "electron-packager ./app $npm_package_name --out=dist/ --platform=win32 --arch=ia32 --version=0.34.1 --icon=assets/win/icon.ico --overwrite",
     "pack:win64": "electron-packager ./app $npm_package_name --out=dist/ --platform=win32 --arch=x64 --version=0.34.1 --icon=assets/win/icon.ico --overwrite",
     "build": "npm run clean && build:osx && build:win32 && build:win64",
-    "build:osx": "npm run pack:osx && electron-builder dist/$npm_package_name-darwin-x64/$npm_package_name.app --platform=osx --out=dist/$npm_package_name-darwin-x64 --config=build-config.json",
-    "build:win32": "npm run pack:win32 && electron-builder dist/$npm_package_name-win32-ia32 --platform=win --out=dist/$npm_package_name-win32-ia32  --config=build-config.json",
-    "build:win64": "npm run pack:win64 && electron-builder dist/$npm_package_name-win32-x64 --platform=win --out=dist/$npm_package_name-win32-x64 --config=build-config.json"
+    "build:osx": "npm run pack:osx && electron-builder dist/$npm_package_name-darwin-x64/$npm_package_name.app --platform=osx --out=dist/$npm_package_name-darwin-x64-setup --config=build-config.json",
+    "build:win32": "npm run pack:win32 && gulp nsi-template && electron-builder dist/$npm_package_name-win32-ia32 --platform=win --out=dist/$npm_package_name-win32-ia32-setup  --config=build-config.json",
+    "build:win64": "npm run pack:win64 && gulp nsi-template && electron-builder dist/$npm_package_name-win32-x64 --platform=win --out=dist/$npm_package_name-win32-x64-setup --config=build-config.json"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,8 @@
   "dependencies": {
     "electron-builder": "^2.1.1",
     "electron-packager": "^5.1.1",
-    "electron-prebuilt": "^0.34.3"
+    "electron-prebuilt": "^0.34.3",
+    "gulp": "^3.9.0",
+    "gulp-replace": "^0.5.4"
   }
 }
