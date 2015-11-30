@@ -4,7 +4,8 @@
 
 Our NSI installation file is based on electron builder's 
 [`installer.nsi.tpl`](https://github.com/loopline-systems/electron-builder/blob/master/templates/installer.nsi.tpl)
-and we include a [`file association script`](http://nsis.sourceforge.net/File_Association).
+and we include a [`file association script`](http://nsis.sourceforge.net/File_Association)
+from [http://nsis.sourceforge.net](http://nsis.sourceforge.net)
 
 Here is the folder tree!
 ```txt
@@ -66,3 +67,7 @@ and update the electron builder config:
     "nsiTemplate" : "dist/nsi-template/win/installer.nsi.tpl"
   }
 ```
+
+## Here is the result
+
+![file association in windows](/doc/images/file-association-in-windows.gif)
