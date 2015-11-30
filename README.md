@@ -9,6 +9,7 @@ More details about our adventure are present on the blog article we published, a
 1. [Write your first Electron app](doc/first-electron-app.md)
 2. [Package your app to serve it to any platform](doc/packaging-your-app.md)
 3. [Unleash the power of AngularJS](doc/code-your-app-with-angular.md)
+4. [File association on Windows](doc/file-association-on-windows.md)
 
 
 ## How does this boilerplate works ?
