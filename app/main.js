@@ -1,5 +1,7 @@
 var app = require('app');  // Module to control application life.
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
+var ipc = require('ipc');
+var fs = require('fs');
 
 // Report crashes to our server.
 require('crash-reporter').start();
@@ -15,6 +17,16 @@ app.on('window-all-closed', function() {
   if (process.platform != 'darwin') {
     app.quit();
   }
+});
+
+// read the file and send data to the render process
+ipc.on('get-file-data', function(event) {
+  var data = null;
+  if (process.platform == 'win32' && process.argv.length >= 2) {
+    var openFilePath = process.argv[1];
+    data = fs.readFileSync(openFilePath, 'utf-8');
+  }
+  event.returnValue = data;
 });
 
 // This method will be called when Electron has finished
