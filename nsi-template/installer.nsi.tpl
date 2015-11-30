@@ -4,7 +4,7 @@
 #####
 
 # modification: add file association script
-# krisisIncludeDir is replaced by a gulp task: nsi-template
+# projectIncludeDir is replaced by a gulp task: nsi-template
 ########
 !addincludedir "@projectIncludeDir"
 !include "FileAssociation.nsh"
