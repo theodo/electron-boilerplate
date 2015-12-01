@@ -6,7 +6,15 @@
   </head>
   <body>
     <h1>Hello World!</h1>
-    We are using Node.js <script>document.write(process.version)</script>
-    and Electron <script>document.write(process.versions['electron'])</script>.
+    <script>
+      // we use ipc to communicate with the main process
+      var ipc = require('ipc');
+      var data = ipc.sendSync('get-file-data');
+      if (data ===  null) {
+        document.write("There is no file");
+      } else {
+        document.write(data);
+      }
+    </script>
   </body>
 </html>

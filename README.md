@@ -10,6 +10,7 @@ More details about our adventure are present on the blog article we published, a
 2. [Package your app to serve it to any platform](doc/packaging-your-app.md)
 3. [Unleash the power of AngularJS](doc/code-your-app-with-angular.md)
 4. [File association in Windows](doc/file-association-in-windows.md)
+5. [Open file on click in Windows](doc/open-file-in-windows.md)
 
 
 ## How does this boilerplate works ?
