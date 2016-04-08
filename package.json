@@ -6,10 +6,14 @@
     "postinstall": "install-app-deps",
     "start": "electron ./app",
     "build": "npm run build:osx && npm run build:win32 && npm run build:win64 && npm run build:linux64",
-    "build:osx": "build --platform darwin -d",
-    "build:win64": "build --platform win32 --arch x64 -d",
-    "build:win32": "build --platform win32 --arch ia32 -d",
-    "build:linux64": "build --platform linux --arch x64"
+    "build:osx": "build --platform darwin",
+    "build:win64": "build --platform win32 --arch x64",
+    "build:win32": "build --platform win32 --arch ia32",
+    "build:linux64": "build --platform linux --arch x64",
+    "dist": "npm run dist:osx && npm run dist:win32 && npm run dist:win64",
+    "dist:osx": "build --platform darwin -d",
+    "dist:win64": "build --platform win32 --arch x64 -d",
+    "dist:win32": "build --platform win32 --arch ia32 -d"
   },
   "build": {
     "app-bundle-id": "your.id",
@@ -17,8 +21,8 @@
     "iconUrl": "http://www.iconarchive.com/download/i99386/dtafalonso/android-lollipop/Youtube.ico",
     "osx" : {
       "title": "my-awesome-app",
-      "background": "assets/osx/my-awesome-app.png",
-      "icon": "assets/osx/my-awesome-app.icns",
+      "background": "build/icon.png",
+      "icon": "build/icon.icns",
       "icon-size": 80,
       "contents": [
         { "x": 438, "y": 344, "type": "link", "path": "/Applications" },
