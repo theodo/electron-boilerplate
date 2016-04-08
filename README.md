@@ -22,6 +22,7 @@ We created this boilerplate using :
 
 We then configured custom npm tasks to help you get up and running as fast as possible. Here is the `"scripts"` section of our [`package.json`](package.json) file:
 
+brew install GraphicsMagick
 
 package.json
 ```json
