@@ -46,6 +46,7 @@ package.json
 To start the app locally, you simply have to run
 
 ```
+$ npm install
 $ npm start
 ```
 This will go to the `app` folder and launch the Electron main process defined in the `app/main.js` script.

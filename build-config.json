@@ -1,8 +1,8 @@
 {
   "osx" : {
     "title": "my-awesome-app",
-    "background": "assets/osx/installer.png",
-    "icon": "assets/osx/mount.icns",
+    "background": "assets/osx/my-awesome-app.png",
+    "icon": "assets/osx/my-awesome-app.icns",
     "icon-size": 80,
     "contents": [
       { "x": 438, "y": 344, "type": "link", "path": "/Applications" },
